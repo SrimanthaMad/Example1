@@ -32,15 +32,15 @@ class Entry {
 
 @RestController
 @EnableAutoConfiguration
-public class Example {
+public class ExampleController {
 
 
     public static void main(String[] args){
-        SpringApplication.run(Example.class, args);
+        SpringApplication.run(ExampleController.class, args);
     }
 
-    @RequestMapping("/getfizzbuzzlist/{start}/{end}")
-    private  ResponseEntity<Map<String,String>>getFizzBuzzList(@PathVariable("start") int start, @PathVariable("end") int end) {
+    @GetMapping("/getfizzbuzzlist")
+    private  ResponseEntity<Map<String,String>>getFizzBuzzList(@RequestParam("start") int start, @RequestParam("end") int end) {
         Map map = new LinkedHashMap<String,String>();
         IntStream.rangeClosed(start, end).mapToObj(x -> {
             if ((x % 3 == 0 || ("" + x).contains("3")) && (x % 5 == 0 || ("" + x).contains("5"))) {
