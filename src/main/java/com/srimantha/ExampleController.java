@@ -17,7 +17,8 @@ import org.springframework.http.HttpStatus;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Created by srimantha on 17/03/2020.
+ * Rest Controller for the sample application. This class will be the entry point to
+ * all the resources defined in this service
  */
 
 @EnableSwagger2

@@ -9,7 +9,7 @@ import java.util.Map;
 import static org.junit.Assert.*;
 
 /**
- * Created by srimantha on 17/03/2020.
+ * Test class to test the implementation of the ThreeFiveFizzBuzz class
  */
 
 public class FizzBuzzTest {

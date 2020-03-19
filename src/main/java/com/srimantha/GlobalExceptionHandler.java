@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
+/**
+ * Exception handler to output a suitable error message to the user
+ * when the input is invalid
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
