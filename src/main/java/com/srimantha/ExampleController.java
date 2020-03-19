@@ -1,16 +1,13 @@
 package com.srimantha;
 
 import java.util.*;
-import java.util.stream.IntStream;
 
+import com.srimantha.fizzbuzz.FizzBuzz;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;

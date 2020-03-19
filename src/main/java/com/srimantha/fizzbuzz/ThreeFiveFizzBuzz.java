@@ -1,5 +1,6 @@
-package com.srimantha;
+package com.srimantha.fizzbuzz;
 
+import com.srimantha.fizzbuzz.FizzBuzz;
 import org.springframework.stereotype.Component;
 
 import java.util.function.IntFunction;

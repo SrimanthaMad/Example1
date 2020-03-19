@@ -1,4 +1,4 @@
-package com.srimantha;
+package com.srimantha.fizzbuzz;
 
 import org.springframework.stereotype.Component;
 

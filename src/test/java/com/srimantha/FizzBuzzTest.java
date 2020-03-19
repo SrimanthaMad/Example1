@@ -1,5 +1,7 @@
 package com.srimantha;
 
+import com.srimantha.fizzbuzz.FizzBuzz;
+import com.srimantha.fizzbuzz.ThreeFiveFizzBuzz;
 import org.junit.Before;
 import org.junit.Test;
 
