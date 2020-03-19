@@ -11,3 +11,5 @@ The main method is defined in ExampleMain.
 To get more detail on the rest interface use the following link
 
 http://localhost:8080/swagger-ui.html#/
+
+If any problems with maven you could use the sample settings.xml file provided in ./maven dir 
