@@ -13,22 +13,7 @@ import org.springframework.http.HttpStatus;
  * Created by srimantha on 17/03/2020.
  */
 
-class Entry {
-    String key;
-    String value;
-    public Entry(String key, String value){
-        this.key = key;
-        this.value = value;
-    }
 
-    @Override
-    public String toString() {
-        return "Entry{" +
-                "key='" + key + '\'' +
-                ", value='" + value + '\'' +
-                '}';
-    }
-}
 
 @RestController
 @EnableAutoConfiguration
@@ -39,21 +24,10 @@ public class ExampleController {
         SpringApplication.run(ExampleController.class, args);
     }
 
-    @GetMapping("/getfizzbuzzlist")
-    private  ResponseEntity<Map<String,String>>getFizzBuzzList(@RequestParam("start") int start, @RequestParam("end") int end) {
-        Map map = new LinkedHashMap<String,String>();
-        IntStream.rangeClosed(start, end).mapToObj(x -> {
-            if ((x % 3 == 0 || ("" + x).contains("3")) && (x % 5 == 0 || ("" + x).contains("5"))) {
-                return new Entry(""+ x,"FizzBuzz");
-            }else if (x % 3 == 0 || ("" + x).contains("3")) {
-                return new Entry(""+ x,"Fizz");
-            } else if (x % 5 == 0 || ("" + x).contains("5")) {
-                return new Entry(""+ x,"Buzz");
-            } else {
-                return new Entry(""+ x,""+ x);
-            }
-        }).forEach(x -> map.put(x.key, x.value));
-        return new ResponseEntity(map, HttpStatus.OK);
+    @GetMapping("/izzbuzzlist")
+    private  ResponseEntity<Map<String,String>>fizzBuzzList(@RequestParam("start") int start, @RequestParam("end") int end) {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        return new ResponseEntity(fizzBuzz.getFizzBuzzList(start, end), HttpStatus.OK);
     }
 
 }
