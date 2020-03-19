@@ -16,10 +16,8 @@ public class FizzBuzzTest {
     FizzBuzz fizzBuzz;
     @Before
     public void initialize() {
-        fizzBuzz= new FizzBuzz();
+        fizzBuzz= new ThreeFiveFizzBuzz();
     }
-
-
     @Test
     public void testGetFizzBuzzList(){
         Map expectedMap = new LinkedHashMap<String, String>();
